@@ -29,28 +29,8 @@
   letter-spacing: 3px;
 }
 
-.container {
-  /* Styles for the parent container */
-  display: flex;
-  justify-content: center; /* Centers child horizontally */
-  align-items: center; /* Centers child vertically */
-  height: 100vh; /* Optional: Adjust the height of the container */
-}
 
-.centered-div {
-  /* Styles for the centered div */
-  width: 300px; /* Example width */
-  height: 200px; /* Example height */
-  background-color: lightgray; /* Example background color */
-}
 
-.centered-div2{
-    /* Styles for the centered div */
-    width: 300px; /* Example width */
-    height: 200px; /* Example height */
-    background-color: lightgray; /* Example background color */
-
-}
 /*========================Footer=============*/
 .footer{
   color: white;

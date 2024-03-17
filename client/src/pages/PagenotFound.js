@@ -7,7 +7,7 @@ export const PagenotFound = () => {
     <Layout>
       <div className="container">
         <h1 className="centered-div">404</h1>
-        <h2 className="pnf-heading">!ooopsss ! Page notFound</h2>
+        <h2 className="centered-div2">!ooopsss ! Page notFound</h2>
         <Link to="/" className="pnf-btn">
           Go Back
         </Link>
