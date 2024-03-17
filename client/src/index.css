@@ -4,3 +4,71 @@
   box-sizing:border-box;
 
 }
+
+.navbar{
+  font-family: "Poppins",sans-serif;
+  font-size: 17px;
+  line-height: 26px;
+  text-transform: uppercase;
+  box-shadow: 0 8px -6px gray;
+  --webkit-box-shadow:0 8px -6px gray;
+  border-bottom: 0.1px solid gray !important;
+}
+
+.nav-link{
+  font-weight: 300 !important;
+}
+
+.active{
+  border-bottom: 2px solid black;
+}
+
+.navbar-brand{
+  font-weight: 700;
+  font-family: 'robot',sans-serif;
+  letter-spacing: 3px;
+}
+
+.container {
+  /* Styles for the parent container */
+  display: flex;
+  justify-content: center; /* Centers child horizontally */
+  align-items: center; /* Centers child vertically */
+  height: 100vh; /* Optional: Adjust the height of the container */
+}
+
+.centered-div {
+  /* Styles for the centered div */
+  width: 300px; /* Example width */
+  height: 200px; /* Example height */
+  background-color: lightgray; /* Example background color */
+}
+
+.centered-div2{
+    /* Styles for the centered div */
+    width: 300px; /* Example width */
+    height: 200px; /* Example height */
+    background-color: lightgray; /* Example background color */
+
+}
+/*========================Footer=============*/
+.footer{
+  color: white;
+  padding: 25px;
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  );
+  background: linear-gradient(to right, #434343,#000000);
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+.footer a:hover{
+  color: #ffefba;
+  border-bottom: 1px solid #ffefba;
+}
