@@ -1,6 +1,7 @@
-import { comparePassword, hashpassword } from "../helpers/authHelper.js";
 import userModel from "../models/userModel.js";
+import bcrypt from "bcryptjs";
 import JWT from "jsonwebtoken";
+import { hashPassword } from "../helpers/authHelper.js";
 export const registerController = async (req, res) => {
   try {
     const { name, email, password, phone, address } = req.body;
@@ -14,13 +15,13 @@ export const registerController = async (req, res) => {
     // existing user
     if (existinguser) {
       return res.status(200).send({
-        success: true,
+        success: false,
         message: "Already register please login",
       });
     }
     // register user
 
-    const hashedPassword = await hashpassword(password);
+    const hashedPassword = await hashPassword(password);
 
     // save
 
@@ -66,9 +67,13 @@ export const loginController = async (req, res) => {
         message: "email is not register ",
       });
     }
-    const match = await comparePassword(password, user.password);
-    if (!match) {
-      return res.status(200).send({
+    //    console.log(password, user.password);
+    const match1 = await bcrypt.compare(password, user.password);
+    console.log(user.password.length);
+    //    console.log(password, user.password);
+    console.log(match1);
+    if (match1) {
+      return res.status(401).send({
         success: false,
         message: "invalid password ",
       });
